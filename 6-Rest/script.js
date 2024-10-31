@@ -3,27 +3,27 @@ document.addEventListener('DOMContentLoaded', function(){
         el: '#invoice-app',
         data: {
             invoiceCurrency: {
-                "symbol": "$",
+                "symbol": "€",
                 "name": "US Dollar",
-                "symbol_native": "$",
+                "symbol_native": "€",
                 "decimal_digits": 2,
                 "rounding": 0,
-                "code": "USD",
+                "code": "EUR",
                 "name_plural": "US dollars"
             },
-            taxRate: 20,
+            taxRate: 21,
             discountRate: 0,
             items: [
-                { description: 'Item name', quantity: 0, price: 0 },
-                { description: 'Item name', quantity: 0, price: 0 },
+                { description: 'Artikelnaam', quantity: 0, price: 0 },
+                { description: 'Artikelnaam', quantity: 0, price: 0 },
 
             ],
             currencies: currenciesData,
             company: {
-                name: 'Your company name',
-                contact: 'Your address\nYour tel\nYour email'
+                name: 'Uw bedrijfsnaam',
+                contact: 'Uw adres\nUw tel.\nUw e-mailadres'
             },
-            client: 'Client information',
+            client: 'Klantinformatie',
             invoiceDate: ''
         },
         methods: {
