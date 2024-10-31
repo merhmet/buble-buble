@@ -312,7 +312,7 @@ function Purchase() {
     return `<span>${item.qty} x ${item.name}</span>`;
   });
   let itemPrices = cartDetails.map(item => {
-    return `<span>₹ ${item.price * item.qty}</span>`;
+    return `<span>€ ${item.price * item.qty}</span>`;
   });
   return `
 <div class='invoice'>
