@@ -186,14 +186,14 @@ function order() {
 
 function okay(event) {
   let container = document.getElementsByClassName("invoice")[0];
-  if (event.target.innerText == "continue") {
+  if (event.target.innerText == "Tskler") {
     container.style.display = "none";
     document.getElementsByClassName("purchase-cover")[0].style.display = "none";
   } else {
-    event.target.innerText = "continue";
+    event.target.innerText = "Tskler";
     event.target.parentElement.getElementsByClassName(
     "order-details")[
-    0].innerHTML = `<em class='thanks'>Thanks for shopping with us</em>`;
+    0].innerHTML = `<em class='thanks'>Bizimle alışveriş yaptığınız için teşekkürler</em>`;
     container.style.height = "180px";
   }
 }
@@ -203,7 +203,7 @@ function okay(event) {
 function AddBtn() {
   return `
 <div>
-  <button onclick='addItem(this)' class='add-btn'>Add <i class='fas fa-chevron-right'></i></button>
+  <button onclick='addItem(this)' class='add-btn'>Ekle <i class='fas fa-chevron-right'></i></button>
 </div>`;
 }
 
@@ -322,14 +322,14 @@ function Purchase() {
   </div>
 <hr>
   <div class='payment'>
-    <em>payment</em>
+    <em>ödeme</em>
     <div>
-      <p>total amount to be paid:</p><span class='pay'>€ ${toPay}</span>
+      <p>ödenecek toplam tutar:</p><span class='pay'>€ ${toPay}</span>
     </div>
   </div>
   <div class='order'>
-    <button onclick='order()' class='btn-order btn'>Order Now</button>
-    <button onclick='buy(0)' class='btn-cancel btn'>Cancel</button>
+    <button onclick='order()' class='btn-order btn'>Şimdi Sipariş Ver</button>
+    <button onclick='buy(0)' class='btn-cancel btn'>Iptal</button>
   </div>
 </div>`;
 }
@@ -340,12 +340,12 @@ function OrderConfirm() {
   return `
 <div>
   <div class='order-details'>
-    <em>your order has been placed</em>
-    <p>Your order-id is : <span>${orderId}</span></p>
-    <p>your order will be delivered to you in 3-5 working days</p>
-    <p>you can pay <span>€ ${totalCost}</span> by card or any online transaction method after the products have been dilivered to you</p>
+    <em>siparişiniz verildi</em>
+    <p>Sipariş kimliğiniz: : <span>${orderId}</span></p>
+    <p>siparişiniz 3-5 iş günü içerisinde tarafınıza teslim edilecektir</p>
+    <p>ödeyebilirsin <span>€ ${totalCost}</span> Ürünler tarafınıza teslim edildikten sonra kartla veya herhangi bir online işlem yöntemiyle</p>
   </div>
-  <button onclick='okay(event)' class='btn-ok'>okay</button>
+  <button onclick='okay(event)' class='btn-ok'>Tamam</button>
 </div>`;
 }
 //}
