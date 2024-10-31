@@ -3,7 +3,7 @@ const productDetails = [
   name: "Airpods Pro",
   price: 100,
   imageUrl:
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJiKtlpQGkIeOyAPV3qQMNkl8uuRzfGWZtIDb_WgDnam8WjhpL&usqp=CAU",
+  "https://od.lk/s/OTFfMzEzNzE4Mzhf/smartechlogo_page-0001__1_-removebg-preview.png",
   qty: 10,
   heading: "Turis 1",
   des:
@@ -257,7 +257,7 @@ function CartItems(cartItem = {}) {
   </div>
   <strong class='name'>${name}</strong>
   <span class='qty-change'>${QtyBtn(qty)}</span>
-  <p class='price'>₹ ${price * qty}</p>
+  <p class='price'>€ ${price * qty}</p>
   <button onclick='removeItem(this)'><i class='fas fa-trash'></i></button>
 </div>`;
 }
@@ -294,13 +294,13 @@ function CartSideNav() {
   return `
 <div class='side-nav'>
   <button onclick='sideNav(0)'><i class='fas fa-times'></i></button>
-  <h2>Cart</h2>
+  <h2>Ürünler</h2>
   <div class='cart-items'></div>
   <div class='final'>
-    <strong>Total: ₹ <span class='total'>0</span>.00/-</strong>
+    <strong>Total: € <span class='total'>0</span>.00/-</strong>
     <div class='action'>
-      <button onclick='buy(1)' class='btn buy'>Purchase <i class='fas fa-credit-card' style='color:#6665dd;'></i></button>
-      <button onclick='clearCart()' class='btn clear'>Clear Cart <i class='fas fa-trash' style='color:#bb342f;'></i></button>
+      <button onclick='buy(1)' class='btn buy'>Satın almak<i class='fas fa-credit-card' style='color:#6665dd;'></i></button>
+      <button onclick='clearCart()' class='btn clear'>Temizle Ürünleri <i class='fas fa-trash' style='color:#bb342f;'></i></button>
     </div>
   </div>
 </div>`;
@@ -324,7 +324,7 @@ function Purchase() {
   <div class='payment'>
     <em>payment</em>
     <div>
-      <p>total amount to be paid:</p><span class='pay'>₹ ${toPay}</span>
+      <p>total amount to be paid:</p><span class='pay'>€ ${toPay}</span>
     </div>
   </div>
   <div class='order'>
@@ -343,7 +343,7 @@ function OrderConfirm() {
     <em>your order has been placed</em>
     <p>Your order-id is : <span>${orderId}</span></p>
     <p>your order will be delivered to you in 3-5 working days</p>
-    <p>you can pay <span>₹ ${totalCost}</span> by card or any online transaction method after the products have been dilivered to you</p>
+    <p>you can pay <span>€ ${totalCost}</span> by card or any online transaction method after the products have been dilivered to you</p>
   </div>
   <button onclick='okay(event)' class='btn-ok'>okay</button>
 </div>`;
@@ -391,7 +391,7 @@ function ToggleBackBtns() {
 }
 
 function CartIsEmpty() {
-  let emptyCart = `<span class='empty-cart'>Looks Like You Haven't Added Any Product In The Cart</span>`;
+  let emptyCart = `<span class='empty-cart'>Görünüşe göre Sepete Herhangi Bir Ürün Eklememişsiniz</span>`;
   if (cartDetails.length == 0) {
     document.getElementsByClassName("cart-items")[0].innerHTML = emptyCart;
   }
