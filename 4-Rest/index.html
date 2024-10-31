@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Restaurant Menu Calculator</title>
+          <title>Junction Menu Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aguafina+Script'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header>
+    <nav id="navbar" class="container-fluid">
+	<h1 id="title">The Junction</h1>
+	<h2>Bar and Restaurant</h2>
+        <h3>Main Menu</h3>
+    </nav>
+</header>
+
+<div class="container" id="menu">
+      <div id="lblStarters">Starters<div class="fa fa-angle-down" id="startersArrow"></div></div>
+      <div id="starters">
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSoup" type="number" name="numSoup" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Seasonal Soup of the day.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="soupCost" value="4.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numFishcakes" type="number" name="numFishcakes" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Homemade Fishcakes.
+      </div>
+      <div class="col col-cost">
+        £ <input class="cost" type="number" id="fishcakesCost" value="5.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numPrawn" type="number" name="numPrawn" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Classic Prawn Cocktail.
+      </div>
+      <div class="col col-cost">
+        £ <input class="cost" type="number" id="prawnCost" value="5.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSfChicken" type="number" name="numSfChickhen" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Southern Fried Crispy Chicken Strippers.
+      </div>
+      <div class="col col-cost">
+       £ <input class="cost" type="number" id="sfChickenCost" value="5.50" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numPate" type="number" name="numPate" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Chef's Homemade Chicken Liver Pate.
+      </div>
+      <div class="col col-cost">
+       £ <input class="cost" type="number" id="pateCost" value="5.45" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numTart" type="number" name="numTart" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Goat's Cheese & Red Onion Marmalade Tart.
+      </div>
+      <div class="col col-cost">
+       £ <input class="cost" type="number" id="tartCost" value="5.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numToast" type="number" name="numToast" value="0"  min="0" max="20">
+      </div>
+      <div class="col">
+        Creamy Garlic Mushrooms Upon Toast.
+      </div>
+      <div class="col col-cost">
+       £ <input class="cost" type="number" id="toastCost" value="5.75" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numBrie" type="number" name="numBrie" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Deep Fried Brie Wedges.
+      </div>
+      <div class="col col-cost">
+       £ <input class="cost" type="number" id="brieCost" value="5.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSkins" type="number" name="numSkins" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Loaded Potato Skins.
+      </div>
+      <div class="col col-cost">
+       £ <input class="cost" type="number" id="skinsCost" value="5.50" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numNachos" type="number" name="numNachos" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Junction Nachos.
+      </div>
+      <div class="col col-cost">
+       £ <input class="cost" type="number" id="nachosCost" value="5.20" readonly>
+      </div>
+    </div>
+  </div>
+
+  <div id="lblmains">Magnificent Mains<div class="fa fa-angle-down" id="mainsArrow"></div></div>
+  <div id="mains">
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numMagMainBeef" type="number" name="numMagMainBeef" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Low N Slow Braised Blade Of Beef.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="magMainBeefCost" value="14.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+      <input class="amountNumber" id="numMagMainChickenFillet" type="number" name="numMagMainChickenFillet" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Chargrilled Chicken Breast Fillet.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="magMainChickenFilletCost" value="12.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numMagMainPie" type="number" name="numMagMainPie" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Homemade Mature Cheddar & Onion Pie.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="magMainPieCost" value="10.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numMagMainJunctionChicken" type="number" name="numMagMainJunctionChicken" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Junction Chicken.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="magMainJunctionChickenCost" value="13.25" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numMagMainSalmon" type="number" name="numMagMainSalmon" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Honey Roast Salmon Fillet.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="magMainSalmonCost" value="14.50" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numMagMainBangersMash" type="number" name="numMagMainBangersMash" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Junction Bangers & Mash.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="magMainBangersMashCost" value="10.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numMagMainHalloumi" type="number" name="numMagMainHalloumi" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Battered Halloumi & Chips.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="magMainHalloumiCost" value="9.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numMagMainLamb" type="number" name="numMagMainLamb" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Rump Of Lamb.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="magMainLambCost" value="15.50" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numMagMainWellington" type="number" name="numMagMainWellington" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Brie, Cranberry & Roast Walnut Wellington.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="magMainWellingtonCost" value="11.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numMagMainJerkChicken" type="number" name="numMagMainJerkChicken" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Jamaican Spiced Jerk Chicken.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="magMainJerkChickenCost" value="12.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numMagMainPork" type="number" name="numMagMainPork" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Grillled Tenderloin Of Pork.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="magMainPorkCost" value="12.95" readonly>
+      </div>
+    </div>
+  </div>
+
+  <div id="lblClassics">Proper Pub Classics & Pies<div class="fa fa-angle-down" id="classicsArrow"></div></div>
+  <div id="classics">
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numClassicPies" type="number" name="numClassicPies" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Mr Taylor's Award Winning Pies.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="classicPiesCost" value="11.50" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numClassicBeefChilli" type="number" name="numMagMainChickenFillet" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Homemade Beef Chilli Con Carne.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="classicBeefChilliCost" value="10.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numClassicBeanChilli" type="number" name="numMagMainPie" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Five Bean Chilli Con Carne.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="classicBeanChilliCost" value="10.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numClassicBeefLasagne" type="number" name="numMagMainJunctionChicken" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Homemade Beef Lasagne.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="classicBeefLasagneCost" value="10.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numClassicBatteredFish" type="number" name="numMagMainSalmon" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Traditional Ale Battered Fish Of The Day.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="classicBatteredFishCost" value="11.50" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numClassicScampi" type="number" name="numMagMainBangersMash" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Wholetail Whitby Scampi.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="classicScampiCost" value="10.95" readonly>
+      </div>
+    </div>
+   </div>
+
+  <div id="lblBurgers">Gourment Burgers<div class="fa fa-angle-down" id="burgersArrow"></div></div>
+  <div id="burgers">
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numBurgerBlackBlue" type="number" name="numBurgerBlackBlue" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Black 'N' Blue.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="burgerBlackBlueCost" value="11.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numBurgerSmokehouse" type="number" name="numBurgerSmokehouse" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        The Junction Smokehouse.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="burgerSmokehouseCost" value="11.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numBurgerBbqMelt" type="number" name="numBurgerBbqMelt" value="0" min="0" max="20">
+      </div>
+       <div class="col">
+          The Hunters Chicken BBQ Melt.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="burgerBbqMeltCost" value="11.50" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numBurgerPorky" type="number" name="numBurgerPorky" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        The Pulled Porky.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="burgerPorkyCost" value="12.50" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numBurgerBean" type="number" name="numBurgerBean" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Junction Bean Burger.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="burgerBeanCost" value="11.95" readonly>
+      </div>
+    </div>
+  </div>
+
+  <div id="lblSteaks">Flame Grilled Steaks<div class="fa fa-angle-down" id="steaksArrow"></div></div>
+  <div id="steaks">
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSteakRump" type="number" name="numSteakRump" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        8oz Rump.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="steakRumpCost" value="13.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSteakSirloin" type="number" name="numSteakSirloin" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        8oz Sirloin.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="steakSirloinCost" value="16.50" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSteakGammon" type="number" name="numSteakGammon" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+         10oz Gammon.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="steakGammonCost" value="11.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSteakGrill" type="number" name="numSteakGrill" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Junction Mixed Grill.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="steakGrillCost" value="18.95" readonly>
+      </div>
+    </div> 
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSteakSurf" type="number" name="numSteakSurf" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Surf & Turf.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="steakSurfCost" value="13.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSteakPepper" type="number" name="numSteakPepper" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Cracked Black Pepper Sauce.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="steakPepperCost" value="2.00" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSteakStilton" type="number" name="numSteakStilton" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Creamy Port & Stilton Sauce.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="steakStiltonCost" value="2.00" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSteakDiane" type="number" name="numSteakDiane" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+          Diane Mustard Sauce.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="steakDianeCost" value="2.00" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSteakEnglish" type="number" name="numSteakEnglish" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        English Mustard Sauce.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="steakEnglishCost" value="2.00" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSteakWine" type="number" name="numSteakWine" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Red Wine Sauce.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="steakWineCost" value="2.00" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSteakMushroom" type="number" name="numSteakMushroom" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Smoked Bacon & Mushroom Sauce.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="steakMushroomCost" value="2.00" readonly>
+      </div>
+    </div>
+  </div>
+
+  <div id="lblSides">Scrumptious Sides<div class="fa fa-angle-down" id="sidesArrow"></div></div>
+  <div id="sides">
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSideGarlicBread" type="number" name="numSideGarlicBread" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Garlic Bread.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="sideGarlicBreadCost" value="2.50" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSideGarlicBreadCheese" type="number" name="numSideGarlicBreadCheese" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Garlic Bread With Cheese.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="sideGarlicBreadCheeseCost" value="3.50" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSideChips" type="number" name="numSideChips" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Twice Cooked Hand Cut Chips.
+      </div>
+      <div class="col col-cost">
+        <input class="cost" type="number" id="sideChipsCost" value="2.50" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSideFries" type="number" name="numSideFries" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Sweet Potato Fries.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="sideFriesCost" value="2.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSideSpirals" type="number" name="numSideSpirals" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+          Spicy Spirals.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="sideSpiralsCost" value="2.95" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSideRings" type="number" name="numSideRings" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Homemade Real Ale Battered Onion Rings.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="sideRingsCost" value="2.50" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSideBread" type="number" name="numSideBread" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Doorstep Bread & Butter.
+      </div>
+      <div class="col col-cost">
+        £<input class="cost" type="number" id="sideBreadCost" value="1.75" readonly>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input class="amountNumber" id="numSideVeg" type="number" name="numSideVeg" value="0" min="0" max="20">
+      </div>
+      <div class="col">
+        Buttered Seasonal Vegetables.
+      </div>
+      <div class="col col-cost">
+        <input class="cost" type="number" id="sideVegCost" value="1.95" readonly>
+      </div>
+    </div>
+  </div>
+
+  <p id="menuTotal"></p>
+
+  <div id="calcButton"><button onclick="menuCalc()">Calculate Bill</button></div>
+</div>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

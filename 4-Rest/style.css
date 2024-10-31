@@ -1,0 +1,99 @@
+body{
+  background-color:#F9EAB3;
+}
+
+#navbar{
+	z-index:500;
+	background:#330000;
+  color:#F9EAB3;
+	width:100%;
+	position:fixed;
+	top:0px;
+	padding-top: 10px;
+  text-align:center;
+  box-shadow: 0px 5px 15px #5F5F5F;
+  font-family: 'Aguafina Script';
+}
+
+h1{
+  font-size: 40pt;
+}
+
+#menu{
+  padding-top:9em;
+  margin:auto;
+  width:100%;
+}
+
+#lblStarters,
+#lblmains,
+#lblClassics,
+#lblBurgers,
+#lblSteaks,
+#lblSides{
+  font-weight:bold;
+  font-size: 18pt;
+  margin-top:1.5em;
+  text-align:center;
+}
+
+#starters{
+  display:none;
+}
+
+#mains{
+  display:none;
+}
+
+#classics{
+  display:none;
+}
+
+#burgers{
+  display:none;
+}
+
+#steaks{
+  display:none;
+}
+
+#sides{
+  display:none;
+}
+
+.amountNumber{
+  width:75px;
+}
+
+.col-cost{
+  display:flex;
+  justify-content:flex-end;
+  width:150px;
+}
+
+.cost{
+  width:75px;
+}
+
+.row{
+  display:flex;
+  align-items: center;
+  border-bottom:solid black 1px;
+  padding:0.5em;
+}
+
+#calcButton{
+  display:flex;
+  justify-content:center;
+}
+
+#menuTotal{
+  text-align:center;
+  margin-top: 1.5em;
+}
+
+.fa-angle-up,
+.fa-angle-down{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}

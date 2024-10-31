@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Daily UI #043 </title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Khand'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body >
+    <div class="container" id="food-menu">
+        <h1 class="h1">Restaurant menu</h1>
+        <section class="content-menu">
+            <aside class="aside-float">
+                <nav class="nav-side">
+                    <a href="#plates">Plates<img src="https://i.postimg.cc/65MPq3bs/cutlery.png" alt="Pratos"></a>
+                    <a href="#drinks">Drinks<img src="https://i.postimg.cc/mg6KXD73/juice.png" alt="Sucos"></a>
+                    <a href="#dessert">Deserts<img src="https://i.postimg.cc/0NMFLsCT/piece-of-cake.png" alt="Sobremesa"></a>
+                    <a href="#food-menu">Top<img src="https://i.postimg.cc/nrDLzgZg/arrow-up.png" alt="Voltar ao Topo"></a>
+                </nav>
+            </aside>
+            <section class="content-side">
+                <section class="items" id="items">
+                    <article class="plates" id="plates">
+                        <div class="header1">
+                            <h1>Plates</h1>
+                        </div>
+                        <ul class="menu-items">
+                            <li class="item" v-for="plate in plates">
+                                <span class="food">{{plate.name}}</span>
+                                <span class="price">{{plate.price}}</span>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+                <section class="items" id="items">
+                    <article class="drinks" id="drinks">
+                        <div class="header2">
+                            <h1>Drinks</h1>
+                        </div>
+                        <ul class="menu-items">
+                            <li class="item" v-for="drink in drinks">
+                                <span class="food">{{drink.name}}</span>
+                                <span class="price">{{drink.price}}</span>
+                            </li>
+                            
+                        </ul>
+                    </article>
+                </section>
+                <section class="items" id="items">
+                    <article class="drinks" id="dessert">
+                        <div class="header3">
+                            <h1>Deserts</h1>
+                        </div>
+                        <ul class="menu-items">
+                            <li class="item" v-for="desert in deserts">
+                                <span class="food">{{desert.name}}</span>
+                                <span class="price">{{desert.price}}</span>
+                            </li>
+
+                        </ul>
+                    </article>
+                </section>
+            </section>
+        </section>
+    </div>
+</body>
+</html>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
