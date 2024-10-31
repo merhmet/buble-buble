@@ -301,7 +301,14 @@ function CartSideNav() {
     <div class='action'>
       <button onclick='buy(1)' class='btn buy'>Satın almak<i class='fas fa-credit-card' style='color:#6665dd;'></i></button>
       <button onclick='clearCart()' class='btn clear'>Temizle Ürünleri <i class='fas fa-trash' style='color:#bb342f;'></i></button>
-    </div>
+
+
+<a href="mailto:smartech.mariakerke@gmail.com">
+      <button onclick='Send Email()' class='Send Email'>Mail Gönder<i class='fa fa-paper-plane' style='color:#bb342f;'></i></button>
+<a href="mailto:smartech.mariakerke@gmail.com">
+
+</a>
+ </div>
   </div>
 </div>`;
 }
@@ -346,6 +353,7 @@ function OrderConfirm() {
     <p>ödeyebilirsin <span>€ ${totalCost}</span> Ürünler tarafınıza teslim edildikten sonra kartla veya herhangi bir online işlem yöntemiyle</p>
   </div>
   <button onclick='okay(event)' class='btn-ok'>Tamam</button>
+
 </div>`;
 }
 //}
